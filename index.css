@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+.mobile{
+    background: white;
+}
+.logo{
+    font-weight: 600;
+    font-size: 30px;
+    padding: 15px;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+}
+a{
+    text-decoration: none;
+    padding: 5px;
+    color: #3a3a3a;
+    border-bottom: 1px solid #3a3a3a ;
+
+    
+}
+li{
+    margin: 5px;
+}
+li:hover{
+    border-bottom: 1px solid black ;
+    width: fit-content;
+
+}
+a:hover{
+    background-color: aliceblue;
+    color: black;
+}
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    ul{
+        display: flex;
+        flex-direction: column
+        ;
+    }
+  }
