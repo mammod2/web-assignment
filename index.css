@@ -9,8 +9,8 @@ html, body{
 
 }
 
-.mobile{
-    background: white;
+.navbar{
+	border-bottom:1px solid #3a3a3a;
 }
 .logo-container{
     display: flex;
@@ -21,6 +21,7 @@ html, body{
 .logo{
     font-weight: 300;
     font-size: 30px;
+	cursor: pointer;
     
 }
 ul{
@@ -32,7 +33,7 @@ a{
     text-decoration: none;
     padding: 5px;
     color: #3a3a3a;
-    
+    padding-inline: 10px;
 
     
 }
@@ -48,19 +49,52 @@ a:hover{
     background-color: aliceblue;
     color: black;
 }
+.toggle-open{
+	display: block;
+	cursor: pointer;
+	
+}
+.toggle-close{
+	display: none;
+	cursor: pointer;
+}
+/* .menu-mobile{
+	display: none;
+} */
+.menu-mobile.open {
+	display: block;
+  }
 @media only screen and (max-width: 768px) {
-    /* For mobile phones: */
+	/* For mobile phones: */
     ul{
-        display: flex;
+		display: flex;
         flex-direction: column
         ;
     }
-    .menu-mobile{
-        -left:50px ;
-    }
+    
     a{
-        border-bottom: 1px solid #3a3a3a ;
+		border-bottom: 1px solid #3a3a3a ;
     }
+	.navbar{
+		border-bottom:none;
+	}
+	.menu-desktop{
+		display: none;
+	}
+	.menu-mobile{
+		display: none;
+	}
+	.toggle-open{
+		display: block;
+		
+	}
+	.toggle-close{
+		display: none;
+	}
+	.menu-mobile.open {
+		display: block;
+	  }
+
   } 
 
 /* @media screen and (min-width:768px) {
