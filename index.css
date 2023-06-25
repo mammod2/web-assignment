@@ -12,20 +12,27 @@ html, body{
 .mobile{
     background: white;
 }
+.logo-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
 .logo{
-    font-weight: 600;
+    font-weight: 300;
     font-size: 30px;
-    padding: 15px;
+    
 }
 ul{
     display: flex;
     flex-direction: row;
+    list-style: none;
 }
 a{
     text-decoration: none;
     padding: 5px;
     color: #3a3a3a;
-    border-bottom: 1px solid #3a3a3a ;
+    
 
     
 }
@@ -48,4 +55,17 @@ a:hover{
         flex-direction: column
         ;
     }
-  }
+    .menu-mobile{
+        -left:50px ;
+    }
+    a{
+        border-bottom: 1px solid #3a3a3a ;
+    }
+  } 
+
+/* @media screen and (min-width:768px) {
+        a{
+            border-bottom: none;
+        }
+}
+
