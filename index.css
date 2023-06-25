@@ -58,12 +58,15 @@ a:hover{
 	display: none;
 	cursor: pointer;
 }
-/* .menu-mobile{
+.menu-mobile{
 	display: none;
-} */
-.menu-mobile.open {
+}
+.nav-buttons{
+	display: none;
+}
+/* .menu-mobile.open {
 	display: block;
-  }
+  } */
 @media only screen and (max-width: 768px) {
 	/* For mobile phones: */
     ul{
@@ -72,7 +75,7 @@ a:hover{
         ;
     }
     
-    a{
+    .nav-link{
 		border-bottom: 1px solid #3a3a3a ;
     }
 	.navbar{
@@ -94,6 +97,9 @@ a:hover{
 	.menu-mobile.open {
 		display: block;
 	  }
+	  .nav-buttons{
+		display: block;
+	}
 
   } 
 
