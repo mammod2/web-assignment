@@ -30,12 +30,12 @@ html, body{
 	cursor: pointer;
     
 }
-.menu-desktop ul{
+ul{
     display: flex;
     flex-direction: row;
     list-style: none;
 }
-.menu-desktop ul a{
+a{
     text-decoration: none;
     padding: 5px;
     color: #3a3a3a;
@@ -73,7 +73,7 @@ a:hover{
 
 @media only screen and (max-width: 768px) {
 	/* For mobile phones: */
-    .menu-desktop ul{
+     ul{
 		display: flex;
         flex-direction: column
         ;
@@ -116,29 +116,41 @@ a:hover{
  */
  .hero1{
     margin-inline: auto;
-    max-width:738px ;
+    max-width:738px;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 
  }
+ .video-container {
+    width: 100%;
+    /* padding-bottom: 56.25%; 16:9 aspect ratio */
+    overflow: hidden;
+    z-index: -1;
+  }
+  
  video{
     /* margin: auto; */
-    min-width: 100%;
+    width: 100%;
     min-height: 100%;
     object-fit: cover;
+    /* overflow: hidden; */
+    /* transform: scale(0.90); */
+    /* z-index: -1; */
+    
 
  }
     .logo-container-hero {
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        bottom: 0%;
+        right: 0%;
+        /* transform: translate(-50%, -50%); */
         margin: 0px 30px;
         
         
     }
-.hero1-logo{
-    opacity: 20%;
+    .hero1-logo{
+    width: 150px;
+    opacity: 60%;
     border: 1px solid gray;
     border-radius: 1000px;
     object-fit: contain;
@@ -146,28 +158,46 @@ a:hover{
 .hero2-container{
     max-width: 738px;
     margin: auto;
-    padding: 0 30px;
+    padding:  50px 0;
     margin-bottom: 50px;
     border-bottom: 2px solid lightgray;
 }
 .hero2{
-    height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    flex-direction: column;
+    background-image: url("https://images.unsplash.com/photo-1557872943-16a5ac26437e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1131&q=80");
+    object-fit: fill;
+    height: 100vh;
 }
-.hero2 h1{
 
-    font-size: 80px;
-    color: black;
+ h1{
+
+    font-size: 60px;
+    color: white;
     transition: 0.3s;
     cursor: pointer;
     font-weight: 600;
 }
-.hero2 h1:hover{
-    -webkit-text-stroke: 2px black;
+h1:hover{
+    -webkit-text-stroke: 1px white;
     color: transparent;
     /* background: black; */
+}
+.hero2 a {
+        padding: 10px;
+        color: white;
+        border: 1px solid white;
+        border-radius: 10px;
+        margin: 20px ;
+        cursor: pointer;
+        transition: 0.5s;
+}
+.hero2 a:hover{
+    background-color: aliceblue;
+    color: #3a3a3a;
+
 }
