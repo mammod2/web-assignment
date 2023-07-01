@@ -151,7 +151,7 @@ a:hover{
     cursor: pointer;
     font-weight: 600;
 }
-h1:hover{
+.hero2 h1:hover{
     -webkit-text-stroke: 1px white;
     color: transparent;
     /* background: black; */
