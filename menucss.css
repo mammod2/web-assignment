@@ -16,8 +16,10 @@ h1 {
 }
 .grid-container {
     display: grid;
-    padding: 3em;
-    grid-gap: 2em;
+    padding: 10px;
+    grid-gap: 10px;
+    max-width: 740px;
+    margin-inline: auto;
 
     .grid-item {
         padding: 1em;
