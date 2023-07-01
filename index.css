@@ -143,7 +143,7 @@ a:hover{
     
 }
 
-h1{
+.hero2 h1{
     
     font-size: 60px;
     color: white;
@@ -151,7 +151,7 @@ h1{
     cursor: pointer;
     font-weight: 600;
 }
-h1:hover{
+.hero2 h1:hover{
     -webkit-text-stroke: 1px white;
     color: transparent;
     /* background: black; */
