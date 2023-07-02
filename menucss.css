@@ -30,12 +30,7 @@ body {
     
     .grid-item {
         padding: 1em;
-<<<<<<< HEAD
-        border-radius: .3em;
-        box-shadow:  10px 30px rgba(0,0,0,0.1);
-=======
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
->>>>>>> 2737c01995cec82fe42a8353d8bd80dd4477b30a
         font-size: 30px;
         text-align: center;
         background-color: #ffffff;
