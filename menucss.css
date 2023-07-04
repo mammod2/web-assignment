@@ -1,5 +1,6 @@
 body {
     margin: 0;
+
 }
 @media (max-width:750px) {
     .grid-container {
@@ -29,7 +30,8 @@ body {
     
     .grid-item {
         padding: 1em;
-        border-radius: .3em;
+        /* border-radius: .3em; */
+        background-color: white;
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
         font-size: 30px;
         text-align: center;
