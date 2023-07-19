@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: #faf9f6;
+    background-color: #1e1e1e;
 }
 @media (max-width:750px) {
     .grid-container {
@@ -17,7 +17,7 @@ body {
 }
 .menu-container h1 {
     text-align: center;
-    color: black;
+    color: #ffffff;
 
 }
 .grid-container {
@@ -29,11 +29,12 @@ body {
     
     
     .grid-item {
-        padding: 1em;
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        padding: 1.5em;
+        box-shadow: #8c8c8c(99, 99, 99, 0.2) 0px 2px 8px 0px;
         font-size: 30px;
         text-align: center;
-        background-color: #ffffff;
+        background-color: #9d2933;
+        border-radius: 10px;
     }
        
 }
@@ -47,4 +48,6 @@ html, body {
 figcaption {
     font-size: 17px;
     font-weight: 300;
+    color: #ffffff;
+    padding-top: 50px;
 }
