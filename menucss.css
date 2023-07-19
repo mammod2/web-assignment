@@ -18,6 +18,7 @@ body {
 .menu-container h1 {
     text-align: center;
     color: #ffffff;
+    padding-bottom: 15px;
 
 }
 .grid-container {
