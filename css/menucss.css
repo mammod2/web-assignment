@@ -40,7 +40,7 @@ body {
     }
 
     .grid-item:hover {
-        scale: 1.7;
+        scale: 1.1;
         transition-property: all;
         transition-duration: 0.7s;
         transition-timing-function: ease;
