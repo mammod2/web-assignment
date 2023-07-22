@@ -38,7 +38,6 @@ section{
   /* Style for the login pop-up */
   .login-popup {
     position: fixed;
-    /* height: 50vh; */
     width: 400px;
     margin-bottom: 15px;
     padding: 30px;
@@ -159,9 +158,8 @@ section{
 
 }
 .hero3-container{
-    margin:0 30px;
+    
     padding: 50px 10px;
-    margin-inline: 20px;
     height: 100%;
     width: 100%;
     text-align: center;
@@ -172,9 +170,12 @@ section{
     display: flex;
     align-items: center;
 }
+
 .hero3-container h1{
-    margin: 0px 30px 30px 30px;
     color: #FFFFFF ;
+}
+.hero3-flex{
+    margin: auto;
 }
 .hero3-left{
     
@@ -185,6 +186,7 @@ section{
     object-fit: contain;
     width: 100%;
     height: auto;
+    padding: 5px;
 
 }
 .hero3-right{
@@ -195,14 +197,20 @@ text-align: left;
 }
 
 @media only screen and (max-width: 768px) {
-    
-    .hero2 h1{
+    .login-popup{
+        width: 100%;
+    }
+    .hero1-contents h1{
         font-size: 30px;
     }
     .hero1-logo{
         width: 100px;
     }
-    .hero3-container{
+    .hero3-flex{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-container{
         display: flex;
         flex-direction: column;
     }

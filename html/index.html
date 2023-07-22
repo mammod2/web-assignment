@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/nav.css">
     <script src="../JavaScript/nav.js"></script>
+    <link rel="icon" type="image/x-icon" href="../images/ramen-icon.png">
     <title>MERODI RAMEN</title>
 </head>
 <body>
@@ -129,29 +130,29 @@
 </body>
 <script>
     window.onload = function () {
-      openLoginPopup();
-    };
-    window.onload = function () {
-    const hasShownLoginPopup = localStorage.getItem('hasShownLoginPopup');
-
-    if (!hasShownLoginPopup) {
-        openLoginPopup();
-      localStorage.setItem('hasShownLoginPopup', 'true');
-    }
+    openLoginPopup();
   };
+  window.onload = function () {
+  const hasShownLoginPopup = localStorage.getItem('hasShownLoginPopup');
 
-    function openLoginPopup() {
-      const backdrop = document.getElementById('backdrop');
-      const loginPopup = document.getElementById('loginPopup');
-      backdrop.style.display = 'block';
-      loginPopup.style.display = 'block';
+  if (!hasShownLoginPopup) {
+      openLoginPopup();
     }
+};
 
-    function closeLoginPopup() {
-      const backdrop = document.getElementById('backdrop');
-      const loginPopup = document.getElementById('loginPopup');
-      backdrop.style.display = 'none';
-      loginPopup.style.display = 'none';
-    }
+function openLoginPopup() {
+    const backdrop = document.getElementById('backdrop');
+    const loginPopup = document.getElementById('loginPopup');
+    backdrop.style.display = 'block';
+    loginPopup.style.display = 'block';
+}
+
+function closeLoginPopup() {
+    const backdrop = document.getElementById('backdrop');
+    const loginPopup = document.getElementById('loginPopup');
+    backdrop.style.display = 'none';
+    loginPopup.style.display = 'none';
+    localStorage.setItem('hasShownLoginPopup', 'true');
+  }
   </script>
 </html>
