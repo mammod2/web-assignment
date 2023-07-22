@@ -36,6 +36,21 @@ body {
         text-align: center;
         background-color: #9d2933;
         border-radius: 10px;
+        overflow:hidden;
+    }
+
+    .grid-item:hover {
+        scale: 1.7;
+        transition-property: all;
+        transition-duration: 0.7s;
+        transition-timing-function: ease;
+
+        .desc {
+            display: block;
+        }
+    }
+    .desc {
+        display: none;
     }
        
 }
