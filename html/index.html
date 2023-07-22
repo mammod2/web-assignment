@@ -50,6 +50,25 @@
         </div>    
     </nav>
     <div class="heros-container">
+        <div class="backdrop" id="backdrop"></div>
+
+  <!-- Login Pop-up -->
+            <div class="login-popup" id="loginPopup">
+                <div class="close-button" onclick="closeLoginPopup()">
+                    <span><strong>MERODI</strong>RAMEN</span>
+                    <span class="material-symbols-outlined">close</span>
+                </div>
+                <div class="login-container">
+                    <span>Login to get 10% discount on <br> our delicious products.</span>
+                    <form>
+                            <span>Email:</span>
+                             <input type="email" placeholder="Phone number,username or email address"><br>
+                             <span>  password:</span>
+                       <input type="password" placeholder="Password">
+                    </form>
+                    <button type="submit" class="submit">Log in</button>
+                </div>
+            </div>
         <section>
 
             <div class="hero1-container" >
@@ -108,4 +127,31 @@
         </div>
 </footer>
 </body>
+<script>
+    window.onload = function () {
+      openLoginPopup();
+    };
+    window.onload = function () {
+    const hasShownLoginPopup = localStorage.getItem('hasShownLoginPopup');
+
+    if (!hasShownLoginPopup) {
+        openLoginPopup();
+      localStorage.setItem('hasShownLoginPopup', 'true');
+    }
+  };
+
+    function openLoginPopup() {
+      const backdrop = document.getElementById('backdrop');
+      const loginPopup = document.getElementById('loginPopup');
+      backdrop.style.display = 'block';
+      loginPopup.style.display = 'block';
+    }
+
+    function closeLoginPopup() {
+      const backdrop = document.getElementById('backdrop');
+      const loginPopup = document.getElementById('loginPopup');
+      backdrop.style.display = 'none';
+      loginPopup.style.display = 'none';
+    }
+  </script>
 </html>
