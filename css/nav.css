@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 html, body{
     width: 100%;
@@ -13,7 +12,9 @@ html, body{
 }
 
 .navbar{
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+    /* height: 128px; */
+    
     background-color: #9d2933;
     color: #D9D9D9;
     position: sticky;
@@ -28,17 +29,33 @@ html, body{
     justify-content: space-around;
     align-items: center;
 }
-.logo{
+.logo_text{
     font-weight: 300;
     font-size: 30px;
 	cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     
+}
+.logo_nav{
+    width: 80px;
+    
+}
+.left{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* order: 1; */
+
 }
 .menu-desktop{
         display: flex;
     flex-direction: row;
     list-style: none;
 }
+
 .nav-link{
     text-decoration: none;
     margin: 5px;
@@ -51,7 +68,6 @@ html, body{
 }
 
 .nav-link:hover{
-    /* border-bottom: 1px solid black ; */
     font-weight: 600;
     color: white;
     width: fit-content;
@@ -79,6 +95,24 @@ html, body{
 .nav-buttons{
 	display: none;
 }
+
+/* Footer */
+.footer_logo{
+    width: 40px;
+   }
+   
+   .footer-container{
+       margin:auto ;
+       max-width: 940px;
+       padding-inline: 10px;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+   }
+   .footer-text{
+       color: #FFFFFF;
+   }
+
 @media only screen and (max-width: 768px) {
     
     h1{

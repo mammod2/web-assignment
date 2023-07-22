@@ -13,7 +13,7 @@
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        background-image: url('images/contact_bgc.png');
+        background-image: url('../images/contact_bgc.png');
         background-size: cover;
         object-fit: contain;
         border-radius: 10px;
