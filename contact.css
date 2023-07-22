@@ -1,12 +1,13 @@
-@media (min-width: 960px){ 
+ 
     /* desktop view */
 
     #page-container{
         display: flex;
         flex-direction: column;
         margin-inline: auto;
-        width: 945px;
-        height:auto;
+        max-width: 965px;
+        padding-inline: 20px;
+        height:1000px;
     }
     #contact-container{
         display: flex;
@@ -14,9 +15,10 @@
         flex-direction: row;
         background-image: url('images/contact_bgc.png');
         background-size: cover;
-        width: 945px;
+        object-fit: contain;
+        border-radius: 10px;
+        width: 100%;
         height: 515px;
-        margin-inline: auto;
         margin-top: 10vh;
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
         justify-content: space-evenly;
@@ -30,7 +32,9 @@
         align-self: center;
         margin-inline: auto;
         place-items: center;
-        background-color: white;
+        border-radius: 10px;
+        background-color: #9D2933;
+        padding: 2%;
         width: 35%;
         height: 45%;
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -46,25 +50,93 @@
     }
 
     .contact-item button {
-        padding: 10px;
-        color: white;
-        background-color: black;
-        border: 1px solid black;
+        padding: 10px 30px;
+        background-color: white;
+        color: #9D2933;
+        font-size: large;
+        border: 1px solid white;
         border-radius: 10px;
         margin: 20px ;
         cursor: pointer;
         transition: 0.5s;
     }
     .contact-item button:hover{
-        background-color: whitesmoke;
-        color: #3a3a3a;
+        background-color: #9D2933;
+        color: white;
     }
-} 
-@media (min-width: 450px){
+ 
+@media (max-width: 760px){
     /* mobile view */
+    #page-container{
+        display: flex;
+        flex-direction: column;
+        padding-inline: 5px;
+        height:1000px;
+        max-width: 455px;
+    }
+    #contact-container{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        background-image: url('images/mobile-ramen.jpeg');
+        background-size: cover;
+        border-radius: 10px;
+        padding: 5% 2%;
+        width: 450px;
+        height: 800px;
+        margin-inline: auto;
+        margin-top: 10vh;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        justify-content: space-between;
+    }
+    
+    .contact-item{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        text-align: center;
+        align-self: center;
+        margin-inline: auto;
+        place-items: center;
+        border-radius: 10px;
+        background-color: #9D2933;
+        padding: 2%;
+        width: 80%;
+        height: 40%;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        order:1;
+    }
+    .contact-item img{
+        margin-top: 10px;
+        width: 20%;
+    }
+
+    .contact-item h5,p{
+        margin:0;
+    }
+
+    .contact-item button {
+        padding: 10px 30px;
+        background-color: white;
+        font-size: large;
+        color: #9D2933;
+        border: 1px solid white;
+        border-radius: 10px;
+        margin: 20px ;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    .contact-item button:hover{
+        background-color: #9D2933;
+        color: white;
+    }
 }
 
 body{
     font-family: 'Raleway',sans-serif;
-    background-color: white;
+    color: white
+}
+
+h1{
+    text-align: center;
 }
