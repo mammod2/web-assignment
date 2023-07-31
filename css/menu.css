@@ -9,10 +9,26 @@ body {
     img {
         width:30%;
     }
+    .desc {
+        display: block;
+    }
 }
 @media (min-width:750px) {
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .grid-item:hover {
+        scale: 1.1;
+        transition-property: all;
+        transition-duration: 0.7s;
+        transition-timing-function: ease;
+
+        .desc {
+            display: block;
+        }
+    }
+    .desc {
+        display: none;
     }
 }
 .menu-container h1 {
@@ -38,21 +54,6 @@ body {
         border-radius: 10px;
         overflow:hidden;
     }
-
-    .grid-item:hover {
-        scale: 1.1;
-        transition-property: all;
-        transition-duration: 0.7s;
-        transition-timing-function: ease;
-
-        .desc {
-            display: block;
-        }
-    }
-    .desc {
-        display: none;
-    }
-       
 }
 img {
     width:100%;
