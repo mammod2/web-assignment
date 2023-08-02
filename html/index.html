@@ -177,6 +177,22 @@ function logout_login(){
 }
 
 //function will check if the token is present or not present in the localStorage
+
+setInterval(function() {
+
+    if (localStorage.getItem('token') !==null) {
+            console.log('token found');
+        closeLoginPopup()
+        
+
+    }else {
+        
+
+        console.log('token not found')
+        openLoginPopup()
+    }
+
+},10000);
 function validationToken() {
         
         if (localStorage.getItem('token') !==null) {

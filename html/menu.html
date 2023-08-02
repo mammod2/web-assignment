@@ -109,4 +109,22 @@
         </div>
     </div>
 </body>
+<script>
+
+    onload = valicationToken();
+    function validationToken() {
+        
+        if (localStorage.getItem('token') !==null) {
+            console.log('token found');
+        closeLoginPopup()
+        
+
+    }else {
+        
+
+        console.log('token not found')
+        openLoginPopup()
+    }
+    }
+</script>
 </html>
