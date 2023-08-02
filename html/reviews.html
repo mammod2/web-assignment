@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="../css/nav.css">
-    <link rel="stylesheet" href="../css/login_page.css" >
+    <link rel="stylesheet" href="../css/reviews.css" >
 
     <script src="../JavaScript/nav.js"></script>
     <link rel="icon" type="image/x-icon" href="../images/ramen-icon.png">
@@ -59,22 +59,27 @@
         </div>    
     </nav>
     <main id="page-container">
-        <h1 style="font-size:60px">Login</h1>
+        <h1 style="font-size:60px">Reviews</h1>
         <div id="contact-container">
             
             <div class="login_container">
                 <div class="email">
-                    <span>Email</span>
-                    <input type="email" placeholder="Email" id="email" onchange="localStorage.setItem('email',document.getElementById('email').value)" />
+                    <span>First Name</span>
+                    <input type="text" placeholder="First Name" id="fname" />
                 </div>    
                 <div class="password">
-                    <span>Password</span>
-                    <input type="password" placeholder="Password" id="password"/>
+                    <span>Second Name</span>
+                    <input type="text" placeholder="Second Name" id="sname"/>
+                </div>   
+                <div class="Question">
+                    
+                    <div class="question-from"></div>
+                    <input type="text" placeholder="Question" id="sname"/>
                 </div>   
                 
             </div>
 
-            <button type="submit" class="submit" onclick="generateToken()">Login</button> 
+            <button type="submit" class="submit" onclick="generateToken()">Submit</button> 
 
             
         </div>
@@ -82,35 +87,7 @@
 </body>
 
 <script>
-    function generateToken() {
-
-const tokenLength = 16;
-const tokenChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-let token = '';
-for (let i = 0; i < tokenLength; i++) {
-  token += tokenChars.charAt(Math.floor(Math.random() * tokenChars.length));
-}
-localStorage.setItem("token", token);
-console.log("this is the token : " + token);
-LoginAlert();
-validationToken();
-
-
-
-
-return token;
-
-
-
-}
-
-
-
-function LoginAlert() {
-       const email = localStorage.getItem('email');
-        console.log(email);
-        alert("Welcome to MerodiRamen " + email);
-    }
+   
 
 function logout_login(){
 
@@ -126,21 +103,7 @@ if(localStorage.getItem('token') !==null){
 }
 
 }
-function validationToken() {
-        
-        if (localStorage.getItem('token') !==null) {
-            console.log('token found');
-            window.location.href = "./index.html";
-        
-        
 
-    }else {
-        
-
-        console.log('token not found')
-        window.location.href = "./login.html";
-    }
-    }
     function logOut(){
         localStorage.clear();
         validationToken();
