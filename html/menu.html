@@ -20,17 +20,17 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="logo-container">
+        <div class="nav-container">
             <div class="left">
                 <img src="../images/logo_without_bg.png" class="logo_nav">
                 <span class="logo_text"><strong>MERODI</strong> RAMEN</span>
             </div>
             <div class="menu-desktop">
-                    <a href="./index.html" class="nav-link">Home</a>
-                    <a href="./menu.html" class="nav-link">Menu</a>
-                    <a href="./FAQ.html" class="nav-link">FAQ</a>
-                    <a href="./contact.html" class="nav-link">Contact</a>
-                    <span class="material-symbols-outlined login">
+                    <a href="../html/index.html" class="nav-link">Home</a>
+                    <a href="../html/menu.html" class="nav-link">Menu</a>
+                    <a href="../html/FAQ.html" class="nav-link">FAQ</a>
+                    <a href="../html/contact.html" class="nav-link">Contact</a>
+                    <span class="material-symbols-outlined login" onclick="logout_login()" >
                         login
                         </span>
             </div>
@@ -45,40 +45,21 @@
                     <span class="material-symbols-outlined ">
                         menu
                     </span>
-                    
                 </div>
             </div>
         </div>
+        
         <div class="menu-mobile">
             <div class="mobile-links">
-                <a href="./index.html" class="nav-link">Home</a>
-                <a href="./menu.html" class="nav-link">Menu</a>
-                <a href="./FAQ.html" class="nav-link">FAQ</a>
-                <a href="./contact.html" class="nav-link">Contact</a>
-                <a href="./">Login</a>
+                <a href="../html/index.html" class="nav-link">Home</a>
+                <a href="../html/menu.html" class="nav-link">Menu</a>
+                <a href="../html/FAQ.html" class="nav-link">FAQ</a>
+                <a href="../html/contact.html" class="nav-link">Contact</a>
+                <a href="../html/login.html" class="nav-link">Login</a>
             </div>
-        </div>    
-
-    <!-- Black background -->
-    <div class="backdrop" id="backdrop"></div>
-    <!-- Login Pop-up -->
-            <div class="login-popup" id="loginPopup">
-                <div class="close-button" onclick="closeLoginPopup()">
-                    <span><strong>MERODI</strong>RAMEN</span>
-                    <span class="material-symbols-outlined">close</span>
-                </div>
-                <div class="login-container">
-                    <span>Login to get 10% discount on <br> our delicious products.</span>
-                    <form>
-                            <span>Email:</span>
-                             <input type="email" placeholder="Phone number,username or email address"><br>
-                             <span>  password:</span>
-                       <input type="password" placeholder="Password">
-                    </form>
-                    <button type="submit" class="submit">Log in</button>
-                </div>
-            </div>
+        </div>
     </nav>
+    
     
     <div class="menu-container">
             <h1>MENU</h1>
