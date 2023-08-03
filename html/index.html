@@ -32,6 +32,9 @@
                     <span class="material-symbols-outlined login" onclick="logout_login()" >
                         login
                         </span>
+                        <span class="material-symbols-outlined login">
+                            logout
+                            </span>
             </div>
             <div class="nav-buttons">
                 <div class="toggle-close">
@@ -84,7 +87,6 @@
     </nav>
     <div class="heros-container">
         <section>
-
             <div class="hero1-container" >
                 <div class="hero1-contents">
                     <h1>
@@ -92,22 +94,16 @@
                         <span class="">RAMEN</span>
                     </h1>
                     <a href="../menu.html">click to browse our Menu</p>
-                        
                 </div>
             </div>
         </section>
         <section>
-            <div>
-                <div class="hero2-container">
                     <div class="video-container">
                         <video autoplay loop muted  >
                             <source src="../images/ramen_video2.mp4" type="video/mp4">
                             Your browser does not support mp4
                         </video>
                     </div>
-                    
-                </div>
-            </div>
         </section>
         <section>
             <div class="hero3-container">
@@ -122,11 +118,8 @@
                     <p>Merodi Ramen, the home of delicious frozen ramen. Inspired by our web design teacher, Dr. Melody, we embarked on a journey to bring the authentic flavors of ramen to the world. It all began in a Sunway University classroom, where we first started selling our mouthwatering ramen creations. With a passion for convenience and a commitment to quality, we have crafted frozen ramen that can be stored for a long time without compromising on taste. Our carefully selected ingredients and unique preparation methods ensure that each bowl of our frozen ramen delivers a delightful and authentic experience. Join us as we share our love for ramen and bring the convenience of flavorful frozen options to your doorstep.</p>
                 </div>
             </div>
-                
-        </div>
-        
+        </section>
     </div>
-</section>
     <script src="../JavaScript/nav.js"></script>
 <footer>
         <div class="footer-container">
@@ -177,6 +170,22 @@ function logout_login(){
 }
 
 //function will check if the token is present or not present in the localStorage
+
+setInterval(function() {
+
+    if (localStorage.getItem('token') !==null) {
+            console.log('token found');
+        closeLoginPopup()
+        
+
+    }else {
+        
+
+        console.log('token not found')
+        openLoginPopup()
+    }
+
+},10000);
 function validationToken() {
         
         if (localStorage.getItem('token') !==null) {
