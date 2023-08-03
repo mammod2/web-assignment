@@ -153,13 +153,12 @@ section{
         transition: 0.5s;
     }
     .hero1-contents a:hover{
-    background-color: aliceblue;
+    background-color: white;
     color: #3a3a3a;
 
 }
 .hero3-container{
-    
-    padding: 50px 10px;
+    /* padding: 50px 10px; */
     height: 100%;
     width: 100%;
     text-align: center;
@@ -173,14 +172,13 @@ section{
 
 .hero3-container h1{
     color: #FFFFFF ;
+    margin-bottom: 25px;
 }
 .hero3-flex{
     margin: auto;
 }
 .hero3-left{
-    
     width: 100%;
-
 }
 .hero3-left img{
     object-fit: contain;
