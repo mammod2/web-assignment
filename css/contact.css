@@ -1,6 +1,8 @@
  
     /* desktop view */
-
+*{
+    text-decoration: none;
+}
     #page-container{
         display: flex;
         flex-direction: column;

@@ -57,13 +57,13 @@
                 <a href="./menu.html" class="nav-link">Menu</a>
                 <a href="./FAQ.html" class="nav-link">FAQ</a>
                 <a href="./contact.html" class="nav-link">Contact</a>
-                <a href="./">Login</a>
+                <a href="./login.html">Login</a>
             </div>
         </div>
     <!-- Black background -->
-        <div class="backdrop" id="backdrop"></div>
+        <!-- <div class="backdrop" id="backdrop"></div> -->
     <!-- Login Pop-up -->
-            <div class="login-popup" id="loginPopup">
+            <!-- <div class="login-popup" id="loginPopup">
                 <div class="close-button" onclick="closeLoginPopup()">
                     <span><strong>MERODI</strong>RAMEN</span>
                     <span class="material-symbols-outlined">close</span>
@@ -78,10 +78,10 @@
                     </form>
                     <button type="submit" class="submit" onclick="generateToken()">Log in</button>
                 </div>
-            </div>
+            </div> -->
 
     <!-- Black background -->
-    <div class="backdrop" id="backdrop"></div>
+    <!-- <div class="backdrop" id="backdrop"></div> -->
     <!-- Login Pop-up -->
             
     </nav>
@@ -170,7 +170,7 @@ function logout_login(){
 
     } else{
         console.log('logging in');
-        openLoginPopup();
+        window.location.href = "./login.html";
     }
 
 }
@@ -181,29 +181,30 @@ setInterval(function() {
 
     if (localStorage.getItem('token') !==null) {
             console.log('token found');
-        closeLoginPopup()
+        
         
 
     }else {
         
 
         console.log('token not found')
-        openLoginPopup()
+        window.location.href = "./login.html";
     }
 
 },10000);
+
 function validationToken() {
         
         if (localStorage.getItem('token') !==null) {
             console.log('token found');
-        closeLoginPopup()
+        
         
 
     }else {
         
 
         console.log('token not found')
-        openLoginPopup()
+        window.location.href = "./login.html";
     }
     }
 
