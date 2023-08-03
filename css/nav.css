@@ -125,6 +125,12 @@ html, body{
     width: fit-content;
 
 }
+#toggle-login{
+    display: none;
+}
+#toggle-logout{
+    display: none;
+}
 @media only screen and (max-width: 768px) {
     
     h1{

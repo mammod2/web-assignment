@@ -29,10 +29,10 @@
                     <a href="./menu.html" class="nav-link">Menu</a>
                     <a href="./FAQ.html" class="nav-link">FAQ</a>
                     <a href="./contact.html" class="nav-link">Contact</a>
-                    <span class="material-symbols-outlined login" onclick="logout_login()" >
+                    <span class="material-symbols-outlined login" onclick="logout_login()" id="toggle_login" >
                         login
                         </span>
-                        <span class="material-symbols-outlined login">
+                        <span class="material-symbols-outlined login"onclick="logout_login()" id="toggle-logout">
                             logout
                             </span>
             </div>
@@ -57,33 +57,9 @@
                 <a href="./menu.html" class="nav-link">Menu</a>
                 <a href="./FAQ.html" class="nav-link">FAQ</a>
                 <a href="./contact.html" class="nav-link">Contact</a>
-                <a href="./login.html">Login</a>
+                <a href="./login.html" class="nav-link">Login</a>
             </div>
         </div>
-    <!-- Black background -->
-        <!-- <div class="backdrop" id="backdrop"></div> -->
-    <!-- Login Pop-up -->
-            <!-- <div class="login-popup" id="loginPopup">
-                <div class="close-button" onclick="closeLoginPopup()">
-                    <span><strong>MERODI</strong>RAMEN</span>
-                    <span class="material-symbols-outlined">close</span>
-                </div>
-                <div class="login-container">
-                    <span>Login to get 10% discount on <br> our delicious products.</span>
-                    <form>
-                            <span>Email:</span>
-                             <input type="email" placeholder="Phone number,username or email address" id="email" onchange="localStorage.setItem('email',document.getElementById('email').value)"><br>
-                             <span>  password:</span>
-                       <input type="password" placeholder="Password">
-                    </form>
-                    <button type="submit" class="submit" onclick="generateToken()">Log in</button>
-                </div>
-            </div> -->
-
-    <!-- Black background -->
-    <!-- <div class="backdrop" id="backdrop"></div> -->
-    <!-- Login Pop-up -->
-            
     </nav>
     <div class="heros-container">
         <section>
@@ -140,114 +116,4 @@
         </div>
 </footer>
 </body>
-<script>
-
-    function LoginAlert() {
-       const email = localStorage.getItem('email');
-        console.log(email);
-        alert("Welcome to MerodiRamen " + email);
-    }
-
-    //function will start when the page is loaded
-    window.onload = function () {
-        validationToken()
-  };
-
-  window.onload = function () {
-  const hasShownLoginPopup = localStorage.getItem('hasShownLoginPopup');
-
-  if (!hasShownLoginPopup) {
-      openLoginPopup();
-    } 
- 
-};
-
-function logout_login(){
-
-    if(localStorage.getItem('token') !==null){
-        console.log('logging out');
-        logOut();
-
-    } else{
-        console.log('logging in');
-        window.location.href = "./login.html";
-    }
-
-}
-
-//function will check if the token is present or not present in the localStorage
-
-setInterval(function() {
-
-    if (localStorage.getItem('token') !==null) {
-            console.log('token found');
-        
-        
-
-    }else {
-        
-
-        console.log('token not found')
-        window.location.href = "./login.html";
-    }
-
-},10000);
-
-function validationToken() {
-        
-        if (localStorage.getItem('token') !==null) {
-            console.log('token found');
-        
-        
-
-    }else {
-        
-
-        console.log('token not found')
-        window.location.href = "./login.html";
-    }
-    }
-
-//fucntion clears the local storage when logging out
-function logOut(){
-        localStorage.clear();
-        validationToken();
-    }
-
-function openLoginPopup() {
-    const backdrop = document.getElementById('backdrop');
-    const loginPopup = document.getElementById('loginPopup');
-    backdrop.style.display = 'block';
-    loginPopup.style.display = 'block';
-}
-
-function closeLoginPopup() {
-    const backdrop = document.getElementById('backdrop');
-    const loginPopup = document.getElementById('loginPopup');
-    backdrop.style.display = 'none';
-    loginPopup.style.display = 'none';
-    localStorage.setItem('hasShownLoginPopup', 'true');
-  }
-
-//fucntion is used to create a 16 character token
-function generateToken() {
-
-    const tokenLength = 16;
-    const tokenChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    let token = '';
-    for (let i = 0; i < tokenLength; i++) {
-      token += tokenChars.charAt(Math.floor(Math.random() * tokenChars.length));
-    }
-    localStorage.setItem("token", token);
-    console.log("this is the token : " + token);
-    LoginAlert();
-    validationToken();
-    
-    return token;
-    
-    
-    
-  }
-  
-  </script>
 </html>
