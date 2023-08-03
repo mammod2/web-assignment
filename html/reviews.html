@@ -29,7 +29,7 @@
                     <a href="./menu.html" class="nav-link">Menu</a>
                     <a href="./FAQ.html" class="nav-link">FAQ</a>
                     <a href="./contact.html" class="nav-link">Contact</a>
-                    <span class="material-symbols-outlined login" onclick="logout_login()">
+                    <a href="./login.html" class="nav-link"></a><span class="material-symbols-outlined login" onclick="logout_login()">
                         login
                         </span>
             </div>
@@ -54,7 +54,7 @@
                 <a href="./menu.html" class="nav-link">Menu</a>
                 <a href="./FAQ.html" class="nav-link">FAQ<S/a>
                 <a href="./contact.html" class="nav-link">Contact</a>
-                <a href="./">Login</a>
+                <a href="./login.html"  class="nav-link">Login</a>
             </div>
         </div>    
     </nav>
@@ -74,9 +74,6 @@
 
                 <button type="submit" class="submit" onclick="generateToken()">Submit</button> 
             </form>
-
-
-            
         </div>
     </main>
 </body>
@@ -103,5 +100,35 @@ if(localStorage.getItem('token') !==null){
         localStorage.clear();
         validationToken();
     }
+    var toggle_login = document.getElementById("toggle_login")
+var toggle_logout = document.getElementById("toggle_logout")
+    function LoginAlert() {
+       const email = localStorage.getItem('email');
+        alert("Welcome to MerodiRamen " + email);
+    }
+
+    //function will start when the page is loaded
+
+  window.onload = function () {
+  const hasShownLoginPopup = localStorage.getItem('hasShownLoginPopup');
+
+  if (!hasShownLoginPopup) {
+      openLoginPopup();
+    } 
+ 
+};
+
+function logout_login(){
+
+    if(localStorage.getItem('token') !==null){
+        console.log('logging out');
+        logOut();
+        
+
+    } else{
+        console.log('logging in');
+        window.location.href = "./login.html";
+    }
+}
 </script>
 </html>

@@ -17,6 +17,12 @@
     <link rel="icon" type="image/x-icon" href="../images/ramen-icon.png">
     <title>Contact</title> 
 </head>
+<script>
+    function redirect(){
+        window.location.href = "./reviews.html";
+    }
+    
+</script>
 <body style="background-color: #1E1E1E;">
     <nav class="navbar">
         <div class="logo-container">
@@ -29,12 +35,11 @@
                     <a href="./menu.html" class="nav-link">Menu</a>
                     <a href="./FAQ.html" class="nav-link">FAQ</a>
                     <a href="./contact.html" class="nav-link">Contact</a>
-                    <span class="material-symbols-outlined login" onclick="logout_login()" id="toggle_login" >
+                 <a href="./login.html" class="nav-link">
+                    <span class="material-symbols-outlined login"  >
                         login
                         </span>
-                        <span class="material-symbols-outlined login"onclick="logout_login()" id="toggle-logout">
-                            logout
-                            </span>
+                    </a>
             </div>
             <div class="nav-buttons">
                 <div class="toggle-close">
@@ -97,9 +102,4 @@
         </div>
 </footer>
 </body>
-<script>
-    function redirect(){
-        window.location.href = "./reviews.html";
-    }
-</script>
 </html>

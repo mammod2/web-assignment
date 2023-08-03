@@ -30,12 +30,11 @@
                     <a href="./menu.html" class="nav-link">Menu</a>
                     <a href="./FAQ.html" class="nav-link">FAQ</a>
                     <a href="./contact.html" class="nav-link">Contact</a>
-                    <span class="material-symbols-outlined login" onclick="logout_login()" id="toggle_login" >
-                        login
-                        </span>
-                        <span class="material-symbols-outlined login"onclick="logout_login()" id="toggle-logout">
-                            logout
+                    <a href="./login.html" class="nav-link">
+                        <span class="material-symbols-outlined login"  >
+                            login
                             </span>
+                        </a>
             </div>
             <div class="nav-buttons">
                 <div class="toggle-close">
@@ -58,6 +57,7 @@
                 <a href="./menu.html" class="nav-link">Menu</a>
                 <a href="./FAQ.html" class="nav-link">FAQ</a>
                 <a href="./contact.html" class="nav-link">Contact</a>
+                <a href="./login.html" class="nav-link">Login</a>
             </div>
         </div>
     </nav>
@@ -115,16 +115,10 @@
 
 if (localStorage.getItem('token') !==null) {
         console.log('token found');
-    
-    
-
 }else {
-    
-
     console.log('token not found')
     window.location.href = "./login.html";
 }
-
 },2000);
 </script>
 </html>
