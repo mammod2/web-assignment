@@ -25,49 +25,29 @@
         console.log("this is the token : " + token);
         LoginAlert();
         validationToken();
-        
-        
-        
-        
         return token;
-        
-        
-        
         }
-        
-        
-        
         function LoginAlert() {
                const email = localStorage.getItem('email');
                 console.log(email);
                 alert("Welcome to MerodiRamen " + email);
             }
-        
         function logout_login(){
-        
         if(localStorage.getItem('token') !==null){
             console.log('logging out');
             logOut();
             window.location.href = "./login.html";
-        
         } else{
             console.log('logging in');
             window.location.href = "./login.html";
-            
         }
-        
         }
         function validationToken() {
                 
                 if (localStorage.getItem('token') !==null) {
                     console.log('token found');
                     window.location.href = "./index.html";
-                
-                
-        
             }else {
-                
-        
                 console.log('token not found')
                 window.location.href = "./login.html";
             }

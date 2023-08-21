@@ -7,6 +7,7 @@ body{
     font-family: 'Raleway',sans-serif;
     color: white
 }
+
         .page-container{
             display: flex;
             flex-direction: column;
@@ -68,8 +69,6 @@ body{
             border: 1px solid black;
             border-radius: 10px;
         }
-     
-        
         .email,.password,.Question{
         display : flex;
         gap: 15px;
